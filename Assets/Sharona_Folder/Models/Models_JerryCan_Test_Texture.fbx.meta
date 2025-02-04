@@ -3,7 +3,17 @@ guid: 75d180487c1c2cd479ab788cef861627
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JerryCan_UVUnwrap
+    second: {fileID: 2100000, guid: 8ad3865be12f43c44abb5dc63404d57c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Top_UVUnwrap
+    second: {fileID: 2100000, guid: a8dce853624eedc43b0245634b0266e8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
