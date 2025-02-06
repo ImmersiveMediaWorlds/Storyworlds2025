@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 80f490b9cb53e7843ab4d1f1d2180346, type: 2}
     - target: {fileID: 919132149155446097, guid: 51dda049c8c09dd43bf21ab41653a3c1, type: 3}
       propertyPath: m_Name
-      value: Ezel_field
+      value: Ezel_PreFab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
