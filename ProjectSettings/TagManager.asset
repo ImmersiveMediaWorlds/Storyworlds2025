@@ -3,8 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< HEAD
+  tags: []
+=======
   tags:
   - Carisia
+>>>>>>> 07cb3c37bd0bffafa73d62871abf9ddcaa2bfe6e
   layers:
   - Default
   - TransparentFX
