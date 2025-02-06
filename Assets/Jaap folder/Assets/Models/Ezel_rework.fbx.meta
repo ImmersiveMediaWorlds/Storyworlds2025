@@ -3,7 +3,12 @@ guid: 7d99669f457b0bb4786903c6a630e8b3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ezel_TEX
+    second: {fileID: 2100000, guid: 866d0a9cc20510045a07517da1c6a73b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
