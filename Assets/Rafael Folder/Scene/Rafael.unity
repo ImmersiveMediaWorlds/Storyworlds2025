@@ -7279,7 +7279,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.2e-43, y: 2.350989e-38, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -239440380, z: 7.2e-43, w: 6.2507345e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -8534,10 +8534,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -507
       objectReference: {fileID: 0}
+    - target: {fileID: -902220578285909161, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71c9fabeb24b28a4882d40284765b4d6, type: 2}
     - target: {fileID: 919132149155446097, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
       propertyPath: m_Name
       value: Grot_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 1255058927902190120, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6410eb9bd763cb94c9222a7003f80698, type: 2}
     - target: {fileID: 1262941016441791128, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -8550,6 +8558,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: -876546973899608171, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+    - target: {fileID: 1521414759406641342, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ea0111f2fe76b14d81a5bd19acf7f29, type: 2}
+    - target: {fileID: 2130746680402981957, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54ba68d94da019e4ba46b84a1df34a01, type: 2}
     - target: {fileID: 3077647864340692115, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
