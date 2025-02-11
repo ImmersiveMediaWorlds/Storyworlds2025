@@ -7,14 +7,14 @@ public class EnvironmentLayer
     public string environmentName; // The name of the environment (e.g., "Beach", "House")
     public int layer;              // The layer associated with the environment
 }
+
 public class EnvironmentScript : MonoBehaviour
 {
-
     [SerializeField] private GameObject hallway;
-
     [SerializeField] private List<EnvironmentLayer> environmentLayerList; // List of environment-layer pairs
-    private Dictionary<string, int> environmentLayerMap;
+    [SerializeField] private List<GameObject> exceptions; // List of exceptions
 
+    private Dictionary<string, int> environmentLayerMap;
     private GameObject[] allEnvironments; // Array of environments
 
     private void Start()
@@ -51,41 +51,49 @@ public class EnvironmentScript : MonoBehaviour
 
     public void ActivateEnv(GameObject environment, bool inEnv)
     {
-        // change layer of hallway
-        foreach (Transform child in hallway.GetComponentsInChildren<Transform>()) 
-        { 
+        // Change layer of hallway
+        foreach (Transform child in hallway.GetComponentsInChildren<Transform>())
+        {
             child.gameObject.layer = inEnv ? environmentLayerMap[hallway.name] : 0;
         }
 
-
-        // loop through the environments
+        // Loop through the environments
         foreach (GameObject child in allEnvironments)
         {
-            //change layer of environments and enable (nontrigger) colliders
+            // Change layer of environments and enable (non-trigger) colliders
             if (child == environment)
             {
                 // Change the layers of the current environment -> 0 means visible
-                foreach (Transform transform in child.GetComponentsInChildren<Transform>()) 
+                foreach (Transform transform in child.GetComponentsInChildren<Transform>())
                 {
-                    transform.gameObject.layer = inEnv ? 0 : environmentLayerMap[child.name]; 
+                    transform.gameObject.layer = inEnv ? 0 : environmentLayerMap[child.name];
                 }
 
                 // Toggle the Colliders of the current environment -> enable if inEnv is true
                 foreach (Collider collider in child.GetComponentsInChildren<Collider>())
                 {
-                    if(!collider.isTrigger)
+                    if (!collider.isTrigger)
                     {
                         collider.enabled = inEnv;
                     }
                 }
-                
-            } 
+            }
             else // Toggle the state of all other environments -> Set to hallway layer if inEnv is true
             {
                 foreach (Transform transform in child.GetComponentsInChildren<Transform>())
                 {
                     transform.gameObject.layer = inEnv ? environmentLayerMap[hallway.name] : environmentLayerMap[child.name];
                 }
+            }
+        }
+
+        // Handle exceptions and its children
+        foreach (GameObject exception in exceptions)
+        {
+            exception.layer = inEnv ? exception.layer : LayerMask.NameToLayer("TEMP");
+            foreach (Transform child in exception.GetComponentsInChildren<Transform>())
+            {
+            child.gameObject.layer = inEnv ? child.gameObject.layer : LayerMask.NameToLayer("TEMP");
             }
         }
     }
