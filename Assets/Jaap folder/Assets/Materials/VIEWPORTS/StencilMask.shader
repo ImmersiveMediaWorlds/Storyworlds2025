@@ -9,7 +9,6 @@ Shader "Unlit/StencilMask"
     {
         Tags { "RenderType"="Opaque" "Queue"="Geometry-1" "RenderPipeline" = "UniversalPipeline"}
 
-
         Pass
         {
             Blend Zero One
