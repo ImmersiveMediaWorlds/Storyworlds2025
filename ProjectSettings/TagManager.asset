@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - EnvironmentsHandler
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - House
   - Beach
   - Beach Miniature
-  - 
+  - Hallway
   - 
   - 
   - 
@@ -43,3 +44,6 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - Mountains
+  - House
+  - Beach
