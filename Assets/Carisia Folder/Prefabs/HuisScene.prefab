@@ -376,12 +376,12 @@ GameObject:
   - component: {fileID: 1510089776116556161}
   - component: {fileID: 2783452496986040275}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: zon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1857301178357923987
 Transform:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 5873441975845610812}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 12.59, y: 12.24, z: -9.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -729,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -744,6 +744,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 5873441975845610812}
@@ -756,6 +760,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1053504390648451266}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 9079795504322203710}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -765,6 +773,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
@@ -780,6 +792,10 @@ PrefabInstance:
       value: set_material
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetSkyboxMat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -790,6 +806,14 @@ PrefabInstance:
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.Renderer, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ChangeSkyboxScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -815,6 +839,10 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Material, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4790452459217465335, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5278684167143734386, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.003
@@ -835,6 +863,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5557099179639923687, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 9079795504322203710}
+    - targetCorrespondingSourceObject: {fileID: 5557099179639923687, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7002548815531311316}
   m_SourcePrefab: {fileID: 100100000, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
@@ -843,6 +874,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5557099179639923687, guid: 88246f8e9c3765d49be8da34eca3c630, type: 3}
   m_PrefabInstance: {fileID: 5369493945873570209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9079795504322203710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547906475518523974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cf28c108ff39e4ea620f8efb640b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkyBoxMat: {fileID: 2100000, guid: 688b252ef63395743a31df763fb04035, type: 2}
 --- !u!45 &7002548815531311316
 Skybox:
   m_ObjectHideFlags: 0

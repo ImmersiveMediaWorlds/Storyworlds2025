@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6554f5545b7c09a498c2b96b0504a198, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -114,7 +114,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _UVSec: 0
-    - _UseAoMap: 0
+    - _UseAoMap: 1
     - _UseColorMap: 1
     - _UseEmissiveMap: 0
     - _UseMetallicMap: 1
