@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 438f15aa7bb86c041b27fa788ca014c6
+guid: 4ded11003ef62074c9ae00cc315c7330
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tree Bark
-    second: {fileID: 2100000, guid: f0fbbd6ef9fed584e9128966a5b57d6f, type: 2}
+      name: Boat_Inside
+    second: {fileID: 2100000, guid: d6a3105dce0823642a7808f38e7baba2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tree Leaves
-    second: {fileID: 2100000, guid: 77606a3a98d07234d85e51f8fad528bf, type: 2}
+      name: Boot_TEX
+    second: {fileID: 2100000, guid: 237674ad4202f5f428cce1d0490f8ed3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
