@@ -3,7 +3,17 @@ guid: d534cf8883070874aaec68f701ea0e61
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Malzeme
+    second: {fileID: 2100000, guid: 63e3ef7e6e8d2fe459d93ad291c8d2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Malzeme.001
+    second: {fileID: 2100000, guid: 20a7564b3c661334b86bbf24c061def2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
