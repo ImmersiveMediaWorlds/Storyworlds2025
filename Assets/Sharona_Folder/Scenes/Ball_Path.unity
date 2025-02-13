@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 599bf8e462c027c4faa45f0544ca0709, type: 3}
       propertyPath: m_Name
-      value: SphereGuidePlat
+      value: BallGuidePlat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -206,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &343087494
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 447473875}
-  destination: {x: 1.1, y: 0.22, z: -0.58}
+  destination: {x: 0.05, y: 0.22, z: 9.44}
   speed: 0
   stopDistance: 0
   rotationOffset: {x: 0, y: 90, z: 90}
@@ -809,7 +809,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
