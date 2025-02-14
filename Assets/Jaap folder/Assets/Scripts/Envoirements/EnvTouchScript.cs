@@ -4,12 +4,12 @@ public class EnvTouchScript : MonoBehaviour
 {
 
     private GameObject player;
-    private EnvironmentSwapScript envScript;
+    private EnvironmentScript envScript;
 
     private void Start()
     {
         player = GameObject.Find("Player");
-        envScript = GameObject.FindWithTag("EnvironmentsHandler").GetComponent<EnvironmentSwapScript>();
+        envScript = GameObject.FindWithTag("EnvironmentsHandler").GetComponent<EnvironmentScript>();
     }
 
     private void OnTriggerEnter(Collider collision)

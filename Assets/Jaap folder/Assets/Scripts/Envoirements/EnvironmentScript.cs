@@ -55,7 +55,6 @@ public class EnvironmentScript : MonoBehaviour
             foreach (Transform child2 in child.GetComponentsInChildren<Transform>())
             {
                 if (child2.CompareTag("Ezel")) {
-                    Debug.Log("Ezel");
                 child2.gameObject.layer = environmentLayerMap[child.tag];
             } else if (child2.CompareTag("NoTouch")) {
                 child2.gameObject.layer = 0;
