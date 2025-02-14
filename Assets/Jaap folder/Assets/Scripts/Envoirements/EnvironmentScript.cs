@@ -45,6 +45,8 @@ public class EnvironmentScript : MonoBehaviour
                 if (!child2.isTrigger) // leave colliders that are a trigger
                 {
                     child2.enabled = false;
+                } else {
+                    child2.gameObject.layer = 0;
                 }
             }
         }
@@ -86,7 +88,7 @@ public class EnvironmentScript : MonoBehaviour
                 foreach (Transform transform in child.GetComponentsInChildren<Transform>())
                 {
                     // change the layer of the object unless the tag is either "Castle" or "Ezel"
-                    if (transform.gameObject.CompareTag("Castle") || transform.gameObject.CompareTag("Ezel")) {
+                    if (transform.gameObject.CompareTag("Castle") || transform.gameObject.CompareTag("Ezel") || transform.gameObject.name == "TRIGGER") {
                         continue;
                 } else {
                         transform.gameObject.layer = inEnv ? 0 : environmentLayerMap[child.name];
