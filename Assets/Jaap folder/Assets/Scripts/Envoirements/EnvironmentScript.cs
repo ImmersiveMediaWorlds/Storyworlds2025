@@ -69,7 +69,7 @@ public class EnvironmentScript : MonoBehaviour
     }
 
     public void ActivateEnv(GameObject environment, bool inEnv)
-    {
+    {   
         // Change layer of hallway
         foreach (Transform child in hallway.GetComponentsInChildren<Transform>())
         {
@@ -102,24 +102,17 @@ public class EnvironmentScript : MonoBehaviour
                     }
                 }
             }
-            else // Toggle the state of all other environments -> Set to hallway layer if inEnv is true
-            {
-                foreach (Transform transform in child.GetComponentsInChildren<Transform>())
-                {
-                    transform.gameObject.layer = inEnv ? environmentLayerMap[hallway.name] : environmentLayerMap[child.name];
-                }
-            }
         }
 
-        // Handle exceptions and its children
-        foreach (GameObject exception in exceptions)
-        {
+        // // Handle exceptions and its children
+        // foreach (GameObject exception in exceptions)
+        // {
             
-            exception.layer = inEnv ? exception.layer : LayerMask.NameToLayer("TEMP");
-            foreach (Transform child in exception.GetComponentsInChildren<Transform>())
-            {
-            child.gameObject.layer = inEnv ? child.gameObject.layer : LayerMask.NameToLayer("TEMP");
-            }
-        }
+        //     exception.layer = inEnv ? exception.layer : LayerMask.NameToLayer("TEMP");
+        //     foreach (Transform child in exception.GetComponentsInChildren<Transform>())
+        //     {
+        //     child.gameObject.layer = inEnv ? child.gameObject.layer : LayerMask.NameToLayer("TEMP");
+        //     }
+        // }
     }
 }
