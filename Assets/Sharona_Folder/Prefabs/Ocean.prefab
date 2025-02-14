@@ -1,0 +1,241 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3245333858838391530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3245333858838391531}
+  - component: {fileID: 3245333858838391540}
+  m_Layer: 0
+  m_Name: Waves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3245333858838391531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333858838391530}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3245333859019133026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3245333858838391540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333858838391530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a57126133720c243a7af00a156c9ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spectrum: {fileID: 0}
+  _spectrumFixedAtRuntime: 0
+  _waveDirectionHeadingAngle: 0
+  _overrideGlobalWindSpeed: 0
+  _windSpeed: 20
+  _respectShallowWaterAttenuation: 1
+  _weight: 1
+  _blendMode: 0
+  _queue: 0
+  _resolution: 128
+  _featherWidth: 0
+  _overrideSplineSettings: 0
+  _radius: 50
+  _subdivisions: 1
+  _featherWaveStart: 0.1
+  _version: 0
+  _windTurbulence: 0.145
+  _maxVerticalDisplacement: 10
+  _maxHorizontalDisplacement: 15
+  _enableBakedCollision: 0
+  _timeResolution: 4
+  _smallestWavelengthRequired: 2
+  _timeLoopLength: 32
+  _debug:
+    _drawBounds: 0
+    _drawSlicesInEditor: 0
+--- !u!1 &3245333859019133025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3245333859019133026}
+  - component: {fileID: 3245333859019133027}
+  m_Layer: 0
+  m_Name: Ocean
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3245333859019133026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333859019133025}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3245333858838391531}
+  - {fileID: 3245333859462581097}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3245333859019133027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333859019133025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde37eff0f7685f41902f400d1de0c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _version: 0
+  _globalWindSpeed: 10
+  _viewpoint: {fileID: 0}
+  _camera: {fileID: 0}
+  _teleportThreshold: 10
+  _timeProvider: {fileID: 0}
+  _primaryLight: {fileID: 0}
+  _searchForPrimaryLightOnStartup: 1
+  _material: {fileID: 2100000, guid: d82d92d8d8f214cd0b8bf7c185b2c341, type: 2}
+  _waterTilePrefab: {fileID: 0}
+  _layerName: 
+  _layer: 4
+  _gravityMultiplier: 1
+  _waterBodyCulling: 1
+  _minScale: 8
+  _maxScale: 8
+  _dropDetailHeightBasedOnWaves: 0.081
+  _lodDataResolution: 384
+  _geometryDownSampleFactor: 2
+  _lodCount: 7
+  _extentsSizeMultiplier: 100
+  _renderingLayerMask: 255
+  _simSettingsAnimatedWaves: {fileID: 0}
+  _createSeaFloorDepthData: 1
+  _simSettingsSeaFloorDepth: {fileID: 0}
+  _createFoamSim: 1
+  _simSettingsFoam: {fileID: 0}
+  _createDynamicWaveSim: 1
+  _simSettingsDynamicWaves: {fileID: 11400000, guid: c39cfa23e7e7e418199fcb5244aa4b1b, type: 2}
+  _createFlowSim: 1
+  _simSettingsFlow: {fileID: 0}
+  _createShadowData: 1
+  _simSettingsShadow: {fileID: 0}
+  _createClipSurfaceData: 1
+  _simSettingsClipSurface: {fileID: 11400000, guid: 0dd6ed13a808e4e71bba19b046e4d242, type: 2}
+  _defaultClippingState: 0
+  _createAlbedoData: 1
+  _settingsAlbedo: {fileID: 11400000, guid: 8ae488c67f7cd4a32a3eb3b96a8e5d2c, type: 2}
+  _surfaceSelfIntersectionFixMode: 2
+  _underwaterCullLimit: 0.001
+  _verifyOpaqueAndDepthTexturesEnabled: 1
+  _showOceanProxyPlane: 0
+  _editModeFPS: 30
+  _followSceneCamera: 1
+  _heightQueries: 1
+  _debug:
+    _attachDebugGUI: 0
+    _showOceanTileGameObjects: 0
+    _disableFollowViewpoint: 0
+    _destroyResourcesInOnDisable: 0
+    _forceBatchMode: 0
+    _forceNoGPU: 0
+--- !u!1 &3245333859462581102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3245333859462581097}
+  - component: {fileID: 3245333859462581096}
+  - component: {fileID: 3245333859462581103}
+  m_Layer: 0
+  m_Name: WaterBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3245333859462581097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333859462581102}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3245333859019133026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3245333859462581096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333859462581102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6285dcf56fc2b444ab28946f9efefd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _version: 0
+  _runValidationOnStart: 1
+  _registerWithClipSurfaceData: 0
+  _overrideMaterial: {fileID: 0}
+--- !u!114 &3245333859462581103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245333859462581102}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdff4e1b753d044b5a7dcf91a7e7b863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checkShaderName: 1
+  _checkShaderPasses: 1
+  _disableRenderer: 1
+  _version: 1
+  _mode: 1
+  _primitive: 0
+  _order: -1
+  _inverted: 1
+  _disableClipSurfaceWhenTooFarFromSurface: 0
+  _animatedWavesDisplacementSamplingIterations: 4
