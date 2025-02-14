@@ -1222,6 +1222,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 878bc4f7ae4332147834abf2d8424224, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067485015}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 878bc4f7ae4332147834abf2d8424224, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067485017}
   m_SourcePrefab: {fileID: 100100000, guid: 878bc4f7ae4332147834abf2d8424224, type: 3}
 --- !u!1 &2067485013 stripped
 GameObject:
@@ -1265,13 +1268,13 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 8.110858
+  MinDistance: 10.551563
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1347,6 +1350,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &2067485017
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067485013}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 4781951162920444690, guid: 878bc4f7ae4332147834abf2d8424224, type: 3}
+  m_Animations:
+  - {fileID: 4781951162920444690, guid: 878bc4f7ae4332147834abf2d8424224, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2122507256
 GameObject:
   m_ObjectHideFlags: 0
