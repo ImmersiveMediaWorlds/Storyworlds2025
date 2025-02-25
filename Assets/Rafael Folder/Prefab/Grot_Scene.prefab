@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5090707821373008823}
   - component: {fileID: 505062856508068171}
   m_Layer: 0
-  m_Name: Wall-Fog (1)
+  m_Name: Wall-Fog_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 8327182047713996844}
   - component: {fileID: 1697153929394068525}
   m_Layer: 0
-  m_Name: Wall-Fog (2)
+  m_Name: Wall-Fog_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6143,7 +6143,7 @@ GameObject:
   - component: {fileID: 1232263237262673796}
   - component: {fileID: 6034632232265480787}
   m_Layer: 0
-  m_Name: Wall-Fog
+  m_Name: Wall-Fog_Front_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6158,7 +6158,7 @@ Transform:
   m_GameObject: {fileID: 5384977209464202422}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071048, y: -0.0016611919, z: 0.0035522326, w: 0.70709795}
-  m_LocalPosition: {x: 25.097984, y: -142.34752, z: -831.9586}
+  m_LocalPosition: {x: 25.2, y: -142.3, z: -860}
   m_LocalScale: {x: 1069.46, y: 1087.3002, z: 754.30005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6224,6 +6224,115 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5384977209464202422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &5559827023746744221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4604023206341200200}
+  - component: {fileID: 680044893818106334}
+  - component: {fileID: 5625027776193550710}
+  - component: {fileID: 4235749704942282540}
+  m_Layer: 0
+  m_Name: Wall-Fog_Front_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4604023206341200200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559827023746744221}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071048, y: -0.0016611919, z: 0.0035522326, w: 0.70709795}
+  m_LocalPosition: {x: 25, y: -142, z: -817}
+  m_LocalScale: {x: 1069.46, y: 1087.3002, z: 754.30005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1804774571545572658}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &680044893818106334
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559827023746744221}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5625027776193550710
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559827023746744221}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 2
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fab26b71e1c933d44b62234c01507789, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4235749704942282540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559827023746744221}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -11569,7 +11678,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 300
+  MaxDistance: 200
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -12866,6 +12975,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2952642848315188054}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4604023206341200200}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7eb2e945a94780042827dc61452ffef1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 526618222401393187}
