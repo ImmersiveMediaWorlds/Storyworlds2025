@@ -18,9 +18,6 @@ public class TriggerScript : MonoBehaviour
     public GameObject zon;
 
 
-
-
-
     public bool knop;
 
     void Start()
