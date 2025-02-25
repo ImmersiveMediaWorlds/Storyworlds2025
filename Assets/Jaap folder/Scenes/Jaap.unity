@@ -1795,6 +1795,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d99669f457b0bb4786903c6a630e8b3, type: 3}
   m_PrefabInstance: {fileID: 747497623}
   m_PrefabAsset: {fileID: 0}
+--- !u!33 &754590350 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3318477175695810889, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
+  m_PrefabInstance: {fileID: 1157909629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &760263529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3845,6 +3850,10 @@ PrefabInstance:
     - target: {fileID: 204947374940781790, guid: 52527d25161a0d7439345dce0bcbe234, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 204947374940781790, guid: 52527d25161a0d7439345dce0bcbe234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 205193521293705693, guid: 52527d25161a0d7439345dce0bcbe234, type: 3}
       propertyPath: m_Layer
@@ -90319,6 +90328,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fdff94713bbb4d48afc674878c57aaa, type: 3}
   m_PrefabInstance: {fileID: 1076209224}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1104529389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7707560604267571816, guid: c61da38600703814c9af20d91dfe0096, type: 3}
+  m_PrefabInstance: {fileID: 1124953609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1104529390 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7707560604267571822, guid: c61da38600703814c9af20d91dfe0096, type: 3}
+  m_PrefabInstance: {fileID: 1124953609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104529391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104529389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0c0a69611596146aceb2f60532940c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _version: 0
+  _mode: 2
+  _filterOceanData: 13
+  _meniscus: 1
+  _depthFogDensityFactor: 1
+  _volumeGeometry: {fileID: 754590350}
+  _invertCulling: 0
+  _enableShaderAPI: 0
+  _transparentObjectLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  _copyOceanMaterialParamsEachFrame: 1
+  _farPlaneMultiplier: 0.68
+  _debug:
+    _viewOceanMask: 0
+    _disableOceanMask: 0
+    _viewStencil: 0
+    _disableHeightAboveWaterOptimization: 0
+    _disableArtifactCorrection: 0
 --- !u!1001 &1124953609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90403,7 +90453,10 @@ PrefabInstance:
     - {fileID: 2784788242735025467, guid: c61da38600703814c9af20d91dfe0096, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7707560604267571816, guid: c61da38600703814c9af20d91dfe0096, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1104529391}
   m_SourcePrefab: {fileID: 100100000, guid: c61da38600703814c9af20d91dfe0096, type: 3}
 --- !u!1001 &1157909629
 PrefabInstance:
@@ -90457,6 +90510,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1245466585076982550, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1104529390}
     - target: {fileID: 1356658521726654568, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -90840,6 +90897,10 @@ PrefabInstance:
     - target: {fileID: 7821855377316119642, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821855377316119642, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7896890076890804997, guid: a02ab728570759c43b7680c8358ca5ed, type: 3}
       propertyPath: m_RenderingLayerMask
