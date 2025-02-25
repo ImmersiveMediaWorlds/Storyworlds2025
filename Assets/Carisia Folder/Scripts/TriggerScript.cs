@@ -49,6 +49,7 @@ public class TriggerScript : MonoBehaviour
         Debug.Log("ik ga nu aan");
         huis.material = huismaterialdag;
         lantaarn.material = lantaarnmatdag;
+        audiosource.Stop();
         audiosource.PlayOneShot(dagaudio);
         zon.SetActive(true);
 
@@ -60,6 +61,7 @@ public class TriggerScript : MonoBehaviour
         Debug.Log("ik ga uit");
         huis.material = huismaterialnacht;
         lantaarn.material = lantaarnmatnacht;
+        audiosource.Stop();
         audiosource.PlayOneShot(nachtaudio);
         zon.SetActive(false);
 
