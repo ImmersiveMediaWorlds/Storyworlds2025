@@ -19,11 +19,11 @@ public class LookAtCameraAndMove : MonoBehaviour
     private Coroutine gazeCoroutine; // Houdt de gaze-timer bij
     private bool isLastDestination = false; // Kijken of de bal bij de laatste bestemming is
 
+    private bool hasLoggedLastDestination = false; // Het stoppen van een debug log.
     void Update()
     {
         if (destinations.Length == 0)
         {
-            Debug.LogWarning("Geen bestemmingen ingesteld!");
             return;
         }
 
@@ -36,12 +36,15 @@ public class LookAtCameraAndMove : MonoBehaviour
             // Beweeg naar de bestemming
             transform.position = Vector3.MoveTowards(transform.position, currentDestination.position, speed * Time.deltaTime);
 
-            // Laat de bal altijd naar de camera kijken
-            if (target != null &&!isLastDestination)
+   
+            if (!isLastDestination) // Alleen draaien als het NIET de laatste bestemming is
             {
-                Vector3 direction = target.position - transform.position;
-                Quaternion lookRotation = Quaternion.LookRotation(direction);
-                transform.rotation = lookRotation * Quaternion.Euler(rotationOffset);
+                if (target != null)
+                {
+                    Vector3 direction = target.position - transform.position;
+                    Quaternion lookRotation = Quaternion.LookRotation(direction);
+                    transform.rotation = lookRotation * Quaternion.Euler(rotationOffset);
+                }
             }
 
             // Speel geluid af als het object beweegt
@@ -52,13 +55,20 @@ public class LookAtCameraAndMove : MonoBehaviour
         }
         else if (isAtDestination)
         {
+
+            if (currentDestinationIndex >= destinations.Length - 1 && !hasLoggedLastDestination)
+            {
+                Debug.Log("Laatste bestemming bereikt!");
+                isLastDestination = true; // Stoppen met kijken naar de camera op de laatste bestemming
+                hasLoggedLastDestination = true; // Stoppen van het verschijnen van het eind bericht
+                return; // Stop als alle bestemmingen bereikt zijn
+            }
+
             // Stop het geluid
             if (audioSource.isPlaying)
             {
                 audioSource.Stop();
             }
-
-            Debug.Log("Bestemming bereikt! Wachten op gaze-trigger...");
 
             // Laat de bal naar de camera kijken, ook als hij stilstaat
             if (target != null && !isLastDestination)
@@ -84,7 +94,6 @@ public class LookAtCameraAndMove : MonoBehaviour
             {
                 isGazing = true;
                 gazeCoroutine = StartCoroutine(GazeTriggerTimer());
-                Debug.Log("Gaze gestart op: " + hit.collider.gameObject.name);
             }
         }
         else
@@ -96,7 +105,6 @@ public class LookAtCameraAndMove : MonoBehaviour
                 {
                     StopCoroutine(gazeCoroutine);
                 }
-                Debug.Log("Gaze gestopt");
             }
         }
     }
@@ -107,7 +115,6 @@ public class LookAtCameraAndMove : MonoBehaviour
 
         if (isGazing) // Controleer of de speler nog steeds kijkt
         {
-            Debug.Log("Gaze-trigger voltooid! Beweeg naar de volgende bestemming.");
             GoToNextDestination();
         }
     }
@@ -118,7 +125,6 @@ public class LookAtCameraAndMove : MonoBehaviour
 
         if (currentDestinationIndex >= destinations.Length)
         {
-            Debug.Log("Laatste bestemming bereikt!");
             return; // Stop als alle bestemmingen bereikt zijn
         }
 
