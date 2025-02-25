@@ -90377,6 +90377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1737192539070184070, guid: c61da38600703814c9af20d91dfe0096, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737192539070184070, guid: c61da38600703814c9af20d91dfe0096, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4362274397170233731, guid: c61da38600703814c9af20d91dfe0096, type: 3}
       propertyPath: m_Radius
       value: 0.05
