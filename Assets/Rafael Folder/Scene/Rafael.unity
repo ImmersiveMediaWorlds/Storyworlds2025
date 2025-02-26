@@ -248,6 +248,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 961178617846870341, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e444df47bcf2d7c4cb347d4f19dda7e2, type: 2}
+    - target: {fileID: 1232263237262673796, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9bf6f34a044d12946a42ce4223a6d05e, type: 2}
     - target: {fileID: 1315060186826796936, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
       propertyPath: m_Name
       value: Grot_Scene
@@ -292,9 +300,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.153
       objectReference: {fileID: 0}
+    - target: {fileID: 4604023206341200200, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604023206341200200, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -586
+      objectReference: {fileID: 0}
     - target: {fileID: 5180876050126872410, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
       propertyPath: m_Volume
-      value: 0.25
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180876050126872410, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d374779e743078842b8a40b72fe41234, type: 3}
+    - target: {fileID: 5180876050126872410, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: MaxDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180876050126872410, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: MinDistance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180876050126872410, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d374779e743078842b8a40b72fe41234, type: 3}
+    - target: {fileID: 5384977209464202422, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559827023746744221, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
