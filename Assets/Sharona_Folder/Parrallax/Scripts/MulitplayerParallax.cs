@@ -37,15 +37,16 @@ public class MultiLayerParallax : MonoBehaviour
         {
             if (layers[i] == null) continue;
 
-            // Bereken alleen de Z-offset gebaseerd op de spelerbeweging
-            float zOffset = (player.position.z - transform.position.z) * parallaxFactors[i];
+            // Reverse the Z-offset calculation
+            float zOffset = (transform.position.z - player.position.z) * parallaxFactors[i];
 
-            // Beperk de beweging binnen maxZOffset grenzen
+            // Clamp movement to prevent excessive shifting
             float newZ = Mathf.Clamp(initialZPositions[i] + zOffset, initialZPositions[i] - maxZOffset, initialZPositions[i] + maxZOffset);
 
-            // Pas alleen de Z-positie aan, X en Y blijven gelijk
-            layers[i].position = new Vector3(layers[i].position.x, layers[i].position.y, newZ);
+            // Apply new position while keeping original X and Y
+            layers[i].localPosition = new Vector3(layers[i].localPosition.x, layers[i].localPosition.y, newZ);
         }
+
     }
 }
 
