@@ -505,8 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688872d97164dc043b9af90700867b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hallway: {fileID: 0}
-  player: {fileID: 0}
+  hallway: {fileID: 1354995892}
+  flipTrigger: {fileID: 1095093382}
 --- !u!108 &352351364 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 4308226025909409526, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
@@ -90570,7 +90570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1095093383
 Transform:
   m_ObjectHideFlags: 0
@@ -90613,7 +90613,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -90775,7 +90775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016671661121188663, guid: c61da38600703814c9af20d91dfe0096, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.14
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 9016671661121188663, guid: c61da38600703814c9af20d91dfe0096, type: 3}
       propertyPath: m_LocalRotation.w

@@ -4,8 +4,10 @@ public class FlipHallwayScript : MonoBehaviour
 {
 
     [SerializeField] private GameObject hallway;
-    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject flipTrigger;
+    private GameObject player;
     private bool flipped = false;
+    private bool fromBeach = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,18 +26,20 @@ public class FlipHallwayScript : MonoBehaviour
         if (flipped)
         {
             /* player exits beach area */
-            hallway.transform.Rotate(0, 0, 0);
+            hallway.transform.Rotate(0, -180, 0);
             // move the player to the other side of the hallway
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -player.transform.position.z);
             //rotate the player
             player.transform.Rotate(0, 180, 0);
             flipped = false;
+            flipTrigger.SetActive(false);
         }
-        else
+        else 
         {
             /* player enters beach area */
             hallway.transform.Rotate(0, 180, 0);
             flipped = true;
+            flipTrigger.SetActive(true);
         }
     }
 }
