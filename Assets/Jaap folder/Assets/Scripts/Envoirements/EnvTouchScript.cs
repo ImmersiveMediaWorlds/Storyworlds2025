@@ -6,11 +6,13 @@ public class EnvTouchScript : MonoBehaviour
 
     private GameObject player;
     private EnvironmentScript envScript;
+    private FlipHallwayScript flipScript;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         envScript = GameObject.FindWithTag("EnvironmentsHandler").GetComponent<EnvironmentScript>();
+        flipScript = GameObject.FindWithTag("Flip").GetComponent<FlipHallwayScript>();
     }
 
     private bool isInsideTrigger = false;
@@ -21,7 +23,7 @@ public class EnvTouchScript : MonoBehaviour
         {
             isInsideTrigger = true;
             envScript.ActivateEnv(transform.parent.gameObject, true);
-            Debug.Log("Entered " + transform.parent.gameObject.name);
+            flipScript.FlipHallway(player);
         }
     }
 
