@@ -5,21 +5,9 @@ public class FlipHallwayScript : MonoBehaviour
 
     [SerializeField] private GameObject hallway;
     [SerializeField] private GameObject flipTrigger;
-    private GameObject player;
+    [SerializeField] private GameObject fakeBeach;
     private bool flipped = false;
-    private bool fromBeach = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void FlipHallway(GameObject player)
     {
@@ -33,6 +21,7 @@ public class FlipHallwayScript : MonoBehaviour
             player.transform.Rotate(0, 180, 0);
             flipped = false;
             flipTrigger.SetActive(false);
+            fakeBeach.SetActive(false);
         }
         else 
         {
@@ -40,6 +29,7 @@ public class FlipHallwayScript : MonoBehaviour
             hallway.transform.Rotate(0, 180, 0);
             flipped = true;
             flipTrigger.SetActive(true);
+            fakeBeach.SetActive(true);
         }
     }
 }
