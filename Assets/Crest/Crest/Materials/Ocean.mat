@@ -19,14 +19,13 @@ Material:
   - _FLOW_ON
   - _FOAM_ON
   - _PLANARREFLECTIONS_ON
+  - _PROJECTION_PERSPECTIVE
   - _SUBSURFACESCATTERING_ON
   - _TRANSPARENCY_ON
-  - _UNDERWATER_ON
   - _VARYSMOOTHNESSOVERDISTANCE_ON
   m_InvalidKeywords:
   - _COMPUTEDIRECTIONALLIGHT_ON
   - _DEBUGMULTIPLYBYLIGHT0COLOR_ON
-  - _PROJECTION_BOTH
   - _SUBSURFACEHEIGHTLERP_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 1
@@ -145,7 +144,7 @@ Material:
     - _PlanarReflectionNormalsStrength: 1
     - _PlanarReflections: 1
     - _ProceduralSky: 0
-    - _Projection: 0
+    - _Projection: 1
     - _ReflectionBlur: 0
     - _RefractAmt: 0
     - _RefractionStrength: 1
@@ -176,7 +175,7 @@ Material:
     - _TexelSize: 0.125
     - _TextureRes: 1024
     - _Transparency: 1
-    - _Underwater: 1
+    - _Underwater: 0
     - _Update: 0.083
     - _VarySmoothnessOverDistance: 1
     - _WaveFoamBubblesCoverage: 1.68
