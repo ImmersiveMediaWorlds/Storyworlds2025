@@ -113,6 +113,12 @@ public class EnvironmentScript : MonoBehaviour
                         collider.enabled = inEnv;
                     }
                 }
+            } else {
+                // toggle the colliders of the other environments -> disable if inEnv is true
+                foreach (Collider collider in child.GetComponentsInChildren<Collider>())
+                {
+                    collider.enabled = !inEnv;
+                }
             }
         }
 
