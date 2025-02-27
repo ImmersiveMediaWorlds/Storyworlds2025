@@ -45,7 +45,9 @@ public class EnvironmentScript : MonoBehaviour
                 if (!child2.isTrigger) // leave colliders that are a trigger
                 {
                     child2.enabled = false;
-                } else {
+                }
+                else
+                {
                     child2.gameObject.layer = 0;
                 }
             }
@@ -56,22 +58,26 @@ public class EnvironmentScript : MonoBehaviour
         {
             foreach (Transform child2 in child.GetComponentsInChildren<Transform>())
             {
-                if (child2.CompareTag("Ezel")) {
-                child2.gameObject.layer = environmentLayerMap[child.tag];
-            } else if (child2.CompareTag("NoTouch")) {
-                child2.gameObject.layer = 0;
+                if (child2.CompareTag("Ezel"))
+                {
+                    child2.gameObject.layer = environmentLayerMap[child.tag];
+                }
+                else if (child2.CompareTag("NoTouch"))
+                {
+                    child2.gameObject.layer = 0;
+                }
+                else
+                {
+                    child2.gameObject.layer = environmentLayerMap[child.name];
+                }
             }
-            else {
-                child2.gameObject.layer = environmentLayerMap[child.name];
-            }
-            }
-            
+
         }
 
     }
 
     public void ActivateEnv(GameObject environment, bool inEnv)
-    {   
+    {
         // Change layer of hallway
         foreach (Transform child in hallway.GetComponentsInChildren<Transform>())
         {
@@ -88,10 +94,13 @@ public class EnvironmentScript : MonoBehaviour
                 foreach (Transform transform in child.GetComponentsInChildren<Transform>())
                 {
                     // change the layer of the object unless the tag is either "Castle" or "Ezel"
-                    if (transform.gameObject.CompareTag("Castle") || transform.gameObject.CompareTag("Ezel") || transform.gameObject.name == "TRIGGER") {
-                        
+                    if (transform.gameObject.CompareTag("Castle") || transform.gameObject.CompareTag("Ezel") || transform.gameObject.name == "TRIGGER")
+                    {
+
                         continue;
-                } else {
+                    }
+                    else
+                    {
                         transform.gameObject.layer = inEnv ? 0 : environmentLayerMap[child.name];
                     }
                 }
@@ -110,7 +119,7 @@ public class EnvironmentScript : MonoBehaviour
         // // Handle exceptions and its children
         // foreach (GameObject exception in exceptions)
         // {
-            
+
         //     exception.layer = inEnv ? exception.layer : LayerMask.NameToLayer("TEMP");
         //     foreach (Transform child in exception.GetComponentsInChildren<Transform>())
         //     {
