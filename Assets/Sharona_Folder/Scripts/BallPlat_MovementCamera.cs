@@ -18,6 +18,7 @@ public class LookAtCameraAndMove : MonoBehaviour
     private bool isGazing = false; // Kijkt de speler momenteel naar de trigger?
     private Coroutine gazeCoroutine; // Houdt de gaze-timer bij
     private bool isLastDestination = false; // Kijken of de bal bij de laatste bestemming is
+    private Transform currentDestination; // De huidige bestemming
 
     private bool hasLoggedLastDestination = false; // Het stoppen van een debug log.
     void Update()
@@ -27,7 +28,14 @@ public class LookAtCameraAndMove : MonoBehaviour
             return;
         }
 
-        Transform currentDestination = destinations[currentDestinationIndex];
+        if (destinations != null && destinations.Length > 0 && currentDestinationIndex < destinations.Length)
+        {
+            currentDestination = destinations[currentDestinationIndex];
+        }
+        else
+        {
+            return;
+        }
         float distanceToDestination = Vector3.Distance(transform.position, currentDestination.position);
         bool isAtDestination = distanceToDestination <= stopDistance;
 
