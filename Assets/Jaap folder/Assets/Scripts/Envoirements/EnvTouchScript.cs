@@ -21,8 +21,8 @@ public class EnvTouchScript : MonoBehaviour
     {
         if (collision.gameObject == player)
         {
+            if(transform.parent.gameObject.name == "Beach") flipScript.FlipHallway(player);
             isInsideTrigger = true;
-            flipScript.FlipHallway(player);
             envScript.ActivateEnv(transform.parent.gameObject, true);
         }
     }
