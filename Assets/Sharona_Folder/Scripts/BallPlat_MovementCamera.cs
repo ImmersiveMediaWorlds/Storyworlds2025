@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class LookAtCameraAndMove : MonoBehaviour
@@ -21,6 +21,9 @@ public class LookAtCameraAndMove : MonoBehaviour
     private Transform currentDestination; // De huidige bestemming
 
     private bool hasLoggedLastDestination = false; // Het stoppen van een debug log.
+
+    public float gazeTriggerDistance = 3f; // Minimale afstand voordat gaze werkt
+
     void Update()
     {
         if (destinations.Length == 0)
@@ -44,7 +47,7 @@ public class LookAtCameraAndMove : MonoBehaviour
             // Beweeg naar de bestemming
             transform.position = Vector3.MoveTowards(transform.position, currentDestination.position, speed * Time.deltaTime);
 
-   
+
             if (!isLastDestination) // Alleen draaien als het NIET de laatste bestemming is
             {
                 if (target != null)
@@ -60,19 +63,16 @@ public class LookAtCameraAndMove : MonoBehaviour
         }
         else if (isAtDestination)
         {
-
             if (currentDestinationIndex >= destinations.Length - 1 && !hasLoggedLastDestination)
             {
                 Debug.Log("Laatste bestemming bereikt!");
-                isLastDestination = true; // Stoppen met kijken naar de camera op de laatste bestemming
-                hasLoggedLastDestination = true; // Stoppen van het verschijnen van het eind bericht
-                return; // Stop als alle bestemmingen bereikt zijn
+                isLastDestination = true;
+                hasLoggedLastDestination = true;
+                return;
             }
 
-            // Stop het geluid
             if (audioSource.isPlaying) audioSource.Stop();
 
-            // Laat de bal naar de camera kijken, ook als hij stilstaat
             if (target != null && !isLastDestination)
             {
                 Vector3 direction = target.position - transform.position;
@@ -80,12 +80,17 @@ public class LookAtCameraAndMove : MonoBehaviour
                 transform.rotation = lookRotation * Quaternion.Euler(rotationOffset);
             }
 
-            // Check of de speler kijkt naar een object met de juiste tag
-            CheckForGazeTrigger();
+            // ✅ Controleer of de speler binnen de juiste afstand is voordat gaze werkt
+            float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+            if (distanceToPlayer <= gazeTriggerDistance)
+            {
+                CheckForGazeTrigger(); // Alleen starten als de speler dichtbij genoeg is!
+            }
         }
+
     }
 
-    void CheckForGazeTrigger()
+        void CheckForGazeTrigger()
     {
         Ray ray = new Ray(target.position, target.forward);
         RaycastHit hit;
