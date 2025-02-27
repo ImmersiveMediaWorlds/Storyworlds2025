@@ -6,8 +6,14 @@ public class FlipHallwayScript : MonoBehaviour
     [SerializeField] private GameObject hallway;
     [SerializeField] private GameObject flipTrigger;
     [SerializeField] private GameObject fakeBeach;
+    [SerializeField] private GameObject gordijn;
+    [SerializeField] private Animator gordijnAnimator;
     private bool flipped = false;
 
+    public void Start()
+    {
+
+    }
 
     public void FlipHallway(GameObject player)
     {
@@ -22,6 +28,8 @@ public class FlipHallwayScript : MonoBehaviour
             flipped = false;
             flipTrigger.SetActive(false);
             fakeBeach.SetActive(false);
+            gordijn.SetActive(true);
+            gordijnAnimator.SetBool("gordijnTrigger", true);
         }
         else 
         {
@@ -30,6 +38,7 @@ public class FlipHallwayScript : MonoBehaviour
             flipped = true;
             flipTrigger.SetActive(true);
             fakeBeach.SetActive(true);
+            gordijn.SetActive(false);
         }
     }
 }
