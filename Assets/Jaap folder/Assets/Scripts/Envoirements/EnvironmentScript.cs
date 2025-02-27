@@ -89,6 +89,7 @@ public class EnvironmentScript : MonoBehaviour
                 {
                     // change the layer of the object unless the tag is either "Castle" or "Ezel"
                     if (transform.gameObject.CompareTag("Castle") || transform.gameObject.CompareTag("Ezel") || transform.gameObject.name == "TRIGGER") {
+                        
                         continue;
                 } else {
                         transform.gameObject.layer = inEnv ? 0 : environmentLayerMap[child.name];

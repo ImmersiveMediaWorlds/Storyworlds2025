@@ -8,6 +8,7 @@ TagManager:
   - Ezel
   - Castle
   - NoTouch
+  - Flip
   layers:
   - Default
   - TransparentFX
@@ -51,3 +52,4 @@ TagManager:
   - House
   - Beach
   - Hallway
+  - fakeBeach
