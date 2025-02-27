@@ -48,10 +48,7 @@ public class LookAtCameraAndMove : MonoBehaviour
             }
 
             // Speel geluid af als het object beweegt
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            if (!audioSource.isPlaying) audioSource.Play();
         }
         else if (isAtDestination)
         {
@@ -65,10 +62,7 @@ public class LookAtCameraAndMove : MonoBehaviour
             }
 
             // Stop het geluid
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
+            if (audioSource.isPlaying) audioSource.Stop();
 
             // Laat de bal naar de camera kijken, ook als hij stilstaat
             if (target != null && !isLastDestination)
