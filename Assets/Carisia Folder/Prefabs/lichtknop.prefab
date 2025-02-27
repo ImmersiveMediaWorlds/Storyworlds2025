@@ -303,7 +303,7 @@ MonoBehaviour:
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 1
   m_MaxDistance: 0.03
-  m_PokeFilter: {fileID: 0}
+  m_PokeFilter: {fileID: 8573756632988293993}
 --- !u!82 &3065090882866742272
 AudioSource:
   m_ObjectHideFlags: 0
