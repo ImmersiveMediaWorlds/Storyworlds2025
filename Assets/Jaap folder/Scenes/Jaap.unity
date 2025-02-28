@@ -869,11 +869,6 @@ MonoBehaviour:
   fakeBeach: {fileID: 1271262920}
   gordijn: {fileID: 2044297774}
   gordijnAnimator: {fileID: 2044297776}
---- !u!108 &352351364 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 4308226025909409526, guid: 54d723a1e6d81c745aa6b1488ebe89d4, type: 3}
-  m_PrefabInstance: {fileID: 690074392}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &409656110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178001,7 +177996,7 @@ PrefabInstance:
     - target: {fileID: 9159204304428964754, guid: 52527d25161a0d7439345dce0bcbe234, type: 3}
       propertyPath: _primaryLight
       value: 
-      objectReference: {fileID: 352351364}
+      objectReference: {fileID: 0}
     - target: {fileID: 9159432945780474872, guid: 52527d25161a0d7439345dce0bcbe234, type: 3}
       propertyPath: m_Layer
       value: 7
