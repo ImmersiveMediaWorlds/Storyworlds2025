@@ -26,6 +26,9 @@ public class LookAtCameraAndMove : MonoBehaviour
 
     void Update()
     {
+
+        FindVRCamera(); // Zorg ervoor dat de camera altijd gevonden wordt
+
         if (destinations.Length == 0)
         {
             return;
@@ -90,7 +93,25 @@ public class LookAtCameraAndMove : MonoBehaviour
 
     }
 
-        void CheckForGazeTrigger()
+    void FindVRCamera()
+    {
+        if (target == null) // Alleen zoeken als target nog niet ingesteld is
+        {
+            GameObject vrCamera = GameObject.FindGameObjectWithTag("MainCamera"); // Zoek de camera in de scene
+            if (vrCamera != null)
+            {
+                target = vrCamera.transform; // Stel de camera in als target
+                Debug.Log("VR Camera gevonden: " + target.name);
+            }
+            else
+            {
+                Debug.LogWarning("VR Camera niet gevonden! Zorg dat de camera een 'MainCamera' tag heeft.");
+            }
+        }
+    }
+
+
+    void CheckForGazeTrigger()
     {
         Ray ray = new Ray(target.position, target.forward);
         RaycastHit hit;
