@@ -19,8 +19,6 @@ public class TriggerScript : MonoBehaviour
 
     public GameObject zon;
 
-    public GameObject maan;
-
 
     public bool knop;
 
@@ -57,7 +55,6 @@ public class TriggerScript : MonoBehaviour
         audiosource.Stop();
         audiosource.PlayOneShot(dagaudio);
         zon.SetActive(true);
-        maan.SetActive(false);
 
         knop = false;
 
@@ -71,7 +68,6 @@ public class TriggerScript : MonoBehaviour
         audiosource.Stop();
         audiosource.PlayOneShot(nachtaudio);
         zon.SetActive(false);
-        maan.SetActive(true);
 
         knop = true;
 
