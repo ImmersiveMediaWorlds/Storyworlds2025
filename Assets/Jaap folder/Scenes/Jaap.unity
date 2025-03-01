@@ -14944,8 +14944,8 @@ MonoBehaviour:
   dagaudio: {fileID: 8300000, guid: f81d57f1ae932e0408c75c5fc7094683, type: 3}
   nachtaudio: {fileID: 8300000, guid: 44f07a59d89305740bb39f817a559729, type: 3}
   skybox: {fileID: 1775279610}
-  skyboxNacht: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
-  skyboxDag: {fileID: 2100000, guid: d4454f71d85928744be7771e2143dab7, type: 2}
+  skyboxNacht: {fileID: 2100000, guid: d4454f71d85928744be7771e2143dab7, type: 2}
+  skyboxDag: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
   zon: {fileID: 5873441975464810779}
   knop: 0
 --- !u!1001 &7969208360530388775
