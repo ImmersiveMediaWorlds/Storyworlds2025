@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
 public class TriggerScript : MonoBehaviour
@@ -16,6 +18,11 @@ public class TriggerScript : MonoBehaviour
     public AudioSource audiosource;
     public AudioClip dagaudio;
     public AudioClip nachtaudio;
+
+    [SerializeField] private GameObject skybox;
+    [SerializeField] private Material skyboxNacht;
+
+    [SerializeField] private Material skyboxDag;
 
     public GameObject zon;
 
@@ -55,6 +62,7 @@ public class TriggerScript : MonoBehaviour
         audiosource.Stop();
         audiosource.PlayOneShot(dagaudio);
         zon.SetActive(true);
+        skybox.GetComponent<Renderer>().material = skyboxNacht;
 
         knop = false;
 
@@ -68,6 +76,7 @@ public class TriggerScript : MonoBehaviour
         audiosource.Stop();
         audiosource.PlayOneShot(nachtaudio);
         zon.SetActive(false);
+        skybox.GetComponent<Renderer>().material = skyboxDag;
 
         knop = true;
 
